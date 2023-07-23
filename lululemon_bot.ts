@@ -1,5 +1,3 @@
-// lululemon-bot.ts
-
 import axios from "axios";
 
 const cheerio = require("cheerio");
@@ -21,7 +19,6 @@ async function checkAvailability() {
 		const html: string = response.data;
 		const $ = cheerio.load(html);
 
-		// Replace this selector with the appropriate one that contains the size information on the Lululemon website.
 		const sizeElements = $(".size-selector");
 
 		const availableSizes: string[] = [];
@@ -36,7 +33,7 @@ async function checkAvailability() {
 
 		if (isAvailable) {
 			console.log(`The size ${desiredSize} is available for the T-shirt.`);
-			// Implement a notification mechanism here (e.g., send an email or SMS).
+			// to do: create notification mailer
 		} else {
 			console.log(`The size ${desiredSize} is not available for the T-shirt.`);
 		}

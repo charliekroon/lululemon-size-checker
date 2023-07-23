@@ -1,5 +1,4 @@
 "use strict";
-// lululemon-bot.ts
 var __awaiter =
 	(this && this.__awaiter) ||
 	function (thisArg, _arguments, P, generator) {
@@ -154,7 +153,7 @@ function checkAvailability() {
 					isAvailable = availableSizes_1.includes(desiredSize);
 					if (isAvailable) {
 						console.log("The size ".concat(desiredSize, " is available for the T-shirt."));
-						// Implement a notification mechanism here (e.g., send an email or SMS).
+						// to do: create notification mailer
 					} else {
 						console.log("The size ".concat(desiredSize, " is not available for the T-shirt."));
 					}
